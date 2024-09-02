@@ -5,13 +5,16 @@ on:
     inputs:
       package-name:
         required: true
-        type: string
+        type: choice
+        options:
+          - pkg1
+          - pkg2
 
 jobs:
   test:
     name: "Run E2E tests for ${{ inputs.package-name }}"
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@v4

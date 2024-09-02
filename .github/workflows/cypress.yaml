@@ -9,6 +9,7 @@ on:
         options:
           - pkg1
           - pkg2
+        default: pkg1
 
 jobs:
   test:

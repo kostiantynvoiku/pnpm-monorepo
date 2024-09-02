@@ -23,8 +23,8 @@ importers:
   packages/pkg1:
     devDependencies:
       cypress:
-        specifier: 13.14.0
-        version: 13.14.0
+        specifier: 13.13.0
+        version: 13.13.0
       typescript:
         specifier: ^5.5.3
         version: 5.5.4
@@ -35,8 +35,8 @@ importers:
   packages/pkg2:
     devDependencies:
       cypress:
-        specifier: 13.14.0
-        version: 13.14.0
+        specifier: 13.13.0
+        version: 13.13.0
       typescript:
         specifier: ^5.5.3
         version: 5.5.4
@@ -1029,8 +1029,8 @@ packages:
       which: 2.0.2
     dev: true
 
-  /cypress@13.14.0:
-    resolution: {integrity: sha512-r0+nhd033x883YL6068futewUsl02Q7rWiinyAAIBDW/OOTn+UMILWgNuCiY3vtJjd53efOqq5R9dctQk/rKiw==}
+  /cypress@13.13.0:
+    resolution: {integrity: sha512-ou/MQUDq4tcDJI2FsPaod2FZpex4kpIK43JJlcBgWrX8WX7R/05ZxGTuxedOuZBfxjZxja+fbijZGyxiLP6CFA==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true

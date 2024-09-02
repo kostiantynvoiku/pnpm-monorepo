@@ -1,0 +1,33 @@
+name: Cypress - Run E2E Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      package-name:
+        required: true
+        type: string
+
+jobs:
+  test:
+    name: "Run E2E tests for ${{ inputs.package-name }}"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "Setup pnpm packageManager"
+        uses: pnpm/action-setup@v4
+
+      - name: "Setup NodeJS environment"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          registry-url: "https://npm.pkg.github.com"
+          cache: "pnpm"
+
+      - name: "Run E2E tests"
+        uses: cypress-io/github-action@v6
+        with:
+          command: pnpm -F ${{ inputs.package-name }} cy:run
+
